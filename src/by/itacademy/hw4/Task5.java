@@ -14,18 +14,18 @@ public class Task5 {
                 array[i] = scanner.nextInt();
             }
         }
-        System.out.println("Максимальный элемент массива: " + getMax(array));
+        System.out.println("Минимальный элемент массива с нечетным индексом: " + getMIn(array));
     }
 
-    private static int getMax(int[] array) {
-        int max = -100000;
+    private static int getMIn(int[] array) {
+        int min = 100000;
         for (int i = 1; i < array.length; ) {
-            if (array[i] > max) {
-                max = array[i];
+            if (array[i] < min) {
+                min = array[i];
                 i += 2;
-                System.out.println(max);
+                System.out.println(min);
             }
         }
-        return max;
+        return min;
     }
 }
