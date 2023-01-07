@@ -23,7 +23,6 @@ public class Task5 {
             if (array[i] < min) {
                 min = array[i];
                 i += 2;
-                System.out.println(min);
             }
         }
         return min;
