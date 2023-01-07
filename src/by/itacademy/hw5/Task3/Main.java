@@ -21,19 +21,12 @@ public class Main {
         }
 
         matrix.setMatrix1(matrix1);
-        matrix.setMatrix2(matrix2);
         matrix.outputMatrix(matrix1);
         matrix.outputMatrix(matrix2);
-        matrix.multiplicationByNumber(matrix1, 2);
-        matrix.multiplicationByNumber(matrix2, 2);
+        matrix.multiplyByNumber(matrix1, 2);
         matrix.outputMatrix(matrix1);
-        matrix.outputMatrix(matrix2);
-        matrix.setMatrix1(matrix1);
-        matrix.setMatrix2(matrix2);
-        matrix.outputMatrix(matrix1);
-        matrix.outputMatrix(matrix2);
-        matrix.outputMatrix(matrix.multiplicationMatrix());
-        matrix.outputMatrix(matrix.sumMatrix());
+        matrix.outputMatrix(matrix.multiplyMatrix(matrix2));
+        matrix.outputMatrix(matrix.sumMatrix(matrix2));
     }
 }
 

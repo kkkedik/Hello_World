@@ -2,7 +2,6 @@ package by.itacademy.hw5.Task3;
 
 public class Matrix {
     private int[][] matrix1;
-    private int[][] matrix2;
     private int numberOfColumns;
     private int numberOfLines;
 
@@ -12,7 +11,7 @@ public class Matrix {
     }
 
 
-    public int[][] multiplicationMatrix() {
+    public int[][] multiplyMatrix(int[][] matrix2) {
         int[][] result = new int[numberOfColumns][numberOfLines];
         for (int i = 0; i < numberOfColumns; i++) {
             for (int j = 0; j < numberOfLines; j++) {
@@ -22,7 +21,7 @@ public class Matrix {
         return result;
     }
 
-    public int[][] sumMatrix() {
+    public int[][] sumMatrix(int[][] matrix2) {
         int[][] result = new int[numberOfColumns][numberOfLines];
         for (int i = 0; i < numberOfColumns; i++) {
             for (int j = 0; j < numberOfLines; j++) {
@@ -32,10 +31,11 @@ public class Matrix {
         return result;
     }
 
-    public int[][] multiplicationByNumber(int[][] matrix, int number) {
+    public int[][] multiplyByNumber(int[][] matrix, int number) {
+        int[][] result = new int[numberOfColumns][numberOfLines];
         for (int i = 0; i < numberOfColumns; i++) {
             for (int j = 0; j < numberOfLines; j++) {
-                matrix[i][j] *= number;
+                result[i][j] = matrix1[i][j] * number;
             }
         }
         return matrix;
@@ -59,13 +59,6 @@ public class Matrix {
         this.matrix1 = matrix1;
     }
 
-    public int[][] getMatrix2() {
-        return matrix2;
-    }
-
-    public void setMatrix2(int[][] matrix2) {
-        this.matrix2 = matrix2;
-    }
 
     public int getNumberOfColumns() {
         return numberOfColumns;
