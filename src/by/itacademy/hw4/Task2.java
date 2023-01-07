@@ -10,8 +10,8 @@ public class Task2 {
         if (scn.hasNextInt()) {
             a = scn.nextInt();
             while (a != 0) {
-                sum = sum + a % 10;
-                productOfNum = productOfNum * (a % 10);
+                sum += a % 10;
+                productOfNum *= (a % 10);
                 a /= 10;
             }
             System.out.println("Сумма всех чисел введенного числа равна " + sum);

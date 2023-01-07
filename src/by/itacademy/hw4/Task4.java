@@ -20,8 +20,8 @@ public class Task4 {
     }
 
     private static int getIndexOfMax(int[] array) {
-        int max = -100;
-        int indexOfMax = 0;
+        int max = array[0];
+        int indexOfMax = array[0];
         for (int i = 0; i < array.length; i++) {
             if (array[i] > max) {
                 max = array[i];
@@ -32,8 +32,8 @@ public class Task4 {
     }
 
     private static int getIndexOfMin(int[] array) {
-        int min = 100;
-        int indexOfMin = 0;
+        int min = array[0];
+        int indexOfMin = array[0];
         for (int i = 0; i < array.length; i++) {
             if (array[i] < min) {
                 min = array[i];
