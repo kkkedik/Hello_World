@@ -4,7 +4,7 @@ public class Task8 {
     public static void main(String[] args) {
         int array1[] = new int[10];
         getNumToArray(array1);
-        BubbleSort(array1);
+        bubbleSort(array1);
         goToString(array1);
         int array2[] = new int[10];
         getNumToArray(array2);
@@ -31,7 +31,7 @@ public class Task8 {
         System.out.println();
     }
 
-    public static void BubbleSort(int[] array) {
+    public static void bubbleSort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = array.length - 1; j > i; j--) {
                 if (array[j - 1] > array[j]) {

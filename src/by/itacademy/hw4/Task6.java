@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Task6 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int array[] = new int[10];
+        int[] array = new int[10];
         int numOfPositive = 0;
         int numOfNegative = 0;
         for (int i = 0, p = 1; i < array.length; i++, p++) {
@@ -17,9 +17,9 @@ public class Task6 {
                 numOfPositive++;
             }
         }
-        goToString(array);
-        int positive[] = new int[numOfPositive];
-        int negative[] = new int[numOfNegative];
+        printArray(array);
+        int[] positive = new int[numOfPositive];
+        int[] negative = new int[numOfNegative];
         for (int i = 0, p = 0, t = 0; i < array.length; i++) {
             if (array[i] >= 0) {
                 positive[p++] = array[i];
@@ -27,11 +27,11 @@ public class Task6 {
                 negative[t++] = array[i];
             }
         }
-        goToString(negative);
-        goToString(positive);
+        printArray(negative);
+        printArray(positive);
     }
 
-    public static void goToString(int[] array) {
+    public static void printArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
