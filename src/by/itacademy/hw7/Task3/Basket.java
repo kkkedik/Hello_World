@@ -7,9 +7,9 @@ public class Basket {
     private double appleCost;
     private double pearCost;
     private double apricotCost;
-    private List listOfFruits;
+    private List<Fruit> listOfFruits;
 
-    public Basket(List list) {
+    public Basket(List<Fruit> list) {
         this.listOfFruits = list;
     }
 
@@ -19,17 +19,17 @@ public class Basket {
         }
     }
 
-    public void getTotalCostByPrice(Class<?> fruitClass) {
+    public void getTotalCostByPrice(Class<> fruitClass) {
 
     }
 
     public void getCosts() {
         for (int i = 0; i < listOfFruits.size(); i++) {
             if (listOfFruits.get(i) instanceof Apple) {
-                appleCost += ((Apple) listOfFruits.get(i)).getPrice();
+                appleCost += listOfFruits.get(i).getPrice();
             }
             if (listOfFruits.get(i) instanceof Pear) {
-                pearCost += ((Pear) listOfFruits.get(i)).getPrice();
+                pearCost +=  listOfFruits.get(i).getPrice();
             }
             if (listOfFruits.get(i) instanceof Apricot) {
                 apricotCost += ((Apricot) listOfFruits.get(i)).getPrice();
