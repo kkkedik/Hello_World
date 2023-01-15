@@ -15,8 +15,5 @@ public class Student extends Pupil {
 
     public String getInfo() {
         return super.getInfo() + "\nScholarshipAmount: " + scholarshipAmount;
-       /* return String.format("Name: %s\n Surname: %s\n Course number: %d\n " +
-                        "Group name: %s\nAverage rating: %d\nScholarshipAmount: %d",
-                name, surname, courseNum, groupName, averageRating, scholarshipAmount);*/
     }
 }

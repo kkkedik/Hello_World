@@ -2,8 +2,6 @@ package by.itacademy.hw7.Task1;
 
 public class Main {
     public static void main(String[] args) {
-        Pupil pupil = new Pupil("Andrey", "Policov",
-                3, "PGS_161", 4.5);
 
         Student Vlad = new Student("Vlad", "Golstov",
                 3, "PGS_172", 5.0);
@@ -12,10 +10,10 @@ public class Main {
         Student Ivan = new Student("Ivan", "Budco",
                 5, "PGS_151", 2.2);
 
-        Graduate_Student Pavel = new Graduate_Student("Pavel",
+        GraduateStudent Pavel = new GraduateStudent("Pavel",
                 "Golov", 3, "PGS_172",
                 4.9, "People in prison");
-        Graduate_Student Lola = new Graduate_Student("Lola",
+        GraduateStudent Lola = new GraduateStudent("Lola",
                 "Kilco", 2, "PGS_162",
                 4.1, "Die");
 

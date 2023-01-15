@@ -1,14 +1,10 @@
 package by.itacademy.hw7.Task3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        double totalCost = 0;
-        double appleCost = 0;
-        double apricotCost = 0;
-        double pearCost = 0;
-
-        Fruit fruit = new Fruit(1.37);
-        fruit.printManufacturerInfo();
 
         Pear pear1 = new Pear(4.12);
         Pear pear2 = new Pear(2.86);
@@ -19,31 +15,19 @@ public class Main {
         Apricot apricot1 = new Apricot(2.53);
         Apricot apricot2 = new Apricot(0.97);
 
-        Fruit[] basket = new Fruit[6];
-        basket[0] = apple1;
-        basket[1] = apricot2;
-        basket[2] = pear2;
-        basket[3] = apricot1;
-        basket[4] = pear2;
-        basket[5] = apple2;
+        List listOfFruits = new ArrayList();
+        listOfFruits.add(apple1);
+        listOfFruits.add(apple2);
+        listOfFruits.add(pear1);
+        listOfFruits.add(pear2);
+        listOfFruits.add(apricot1);
+        listOfFruits.add(apricot2);
 
-        for (int i = 0; i < basket.length; i++) {
-            if (basket[i] instanceof Apple) {
-                totalCost += apple1.getPrice();
-                appleCost += apple1.getPrice();
-            }
-            if (basket[i] instanceof Pear) {
-                totalCost += pear1.getPrice();
-                pearCost += pear1.getPrice();
-            }
-            if (basket[i] instanceof Apricot) {
-                totalCost += apricot1.getPrice();
-                apricotCost += apricot1.getPrice();
-            }
-        }
-        System.out.println("Общая стоимость корзины фруктов: " + totalCost +
-                "\nСтоимость яблок: " + appleCost +
-                "\nСтоимость груш: " + pearCost +
-                "\nСтоимость абрикосов: " + apricotCost);
+        Basket basket = new Basket(listOfFruits);
+        basket.getTotalCost();
+        basket.getCosts();
+        basket.showInfo();
+
+
     }
 }
