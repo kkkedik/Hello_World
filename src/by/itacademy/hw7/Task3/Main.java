@@ -15,7 +15,7 @@ public class Main {
         Apricot apricot1 = new Apricot(2.53);
         Apricot apricot2 = new Apricot(0.97);
 
-        List listOfFruits = new ArrayList();
+        List<Fruit> listOfFruits = new ArrayList<>();
         listOfFruits.add(apple1);
         listOfFruits.add(apple2);
         listOfFruits.add(pear1);
@@ -23,7 +23,8 @@ public class Main {
         listOfFruits.add(apricot1);
         listOfFruits.add(apricot2);
 
-        Basket basket = new Basket(listOfFruits);
+        Basket basket = new Basket();
+        basket.setListOfFruits(listOfFruits);
         basket.getTotalCost();
         basket.getCosts();
         basket.showInfo();

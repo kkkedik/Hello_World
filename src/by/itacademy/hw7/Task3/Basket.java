@@ -9,22 +9,30 @@ public class Basket {
     private double apricotCost;
     private List<Fruit> listOfFruits;
 
-    public Basket(List<Fruit> list) {
-        this.listOfFruits = list;
+    public void setListOfFruits(List<Fruit> listOfFruits) {
+        this.listOfFruits = listOfFruits;
     }
+
 
     public void getTotalCost() {
         for (int i = 0; i < listOfFruits.size(); i++) {
-            totalCost += ((Fruit) listOfFruits.get(i)).getPrice();
+            totalCost += listOfFruits.get(i).getPrice();
         }
     }
 
-    public void getTotalCostByPrice(Class fruitClass) {
-
-    }
-//    public void getTotalCostByPrice(Class<> fruitClass) {
+    //    public void getTotalCostByPrice(Class fruitClass) {
+//        for (int i = 0; i < listOfFruits.size(); i++) {
+//            appleCost += listOfFruits.get(i).getPrice();
 //
+//        }
 //    }
+    public void getTotalCostByPrice(Class<?> fruitClass) {
+        for (int i = 0; i < listOfFruits.size(); i++) {
+            if (listOfFruits.get(i) instanceof Apple) {
+                appleCost += listOfFruits.get(i).getPrice();
+            }
+        }
+    }
 
     public void getCosts() {
         for (int i = 0; i < listOfFruits.size(); i++) {
@@ -35,7 +43,7 @@ public class Basket {
                 pearCost += listOfFruits.get(i).getPrice();
             }
             if (listOfFruits.get(i) instanceof Apricot) {
-                apricotCost += ((Apricot) listOfFruits.get(i)).getPrice();
+                apricotCost += listOfFruits.get(i).getPrice();
             }
         }
     }

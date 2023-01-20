@@ -4,8 +4,9 @@ public class Apple extends Fruit {
     protected double applePricePerKilogram = 2.1;
 
     public Apple(double weight) {
-        this.weight = weight;
+        super(weight);
     }
+
 
     @Override
     public double getPrice() {
