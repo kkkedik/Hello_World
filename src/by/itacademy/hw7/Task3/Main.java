@@ -26,9 +26,10 @@ public class Main {
         Basket basket = new Basket();
         basket.setListOfFruits(listOfFruits);
         basket.getTotalCost();
-        basket.getCosts();
-        basket.showInfo();
-
+        System.out.println("Apple: " + basket.getTotalCostByPrice(Apple.class));
+        System.out.println("Apricot: " + basket.getTotalCostByPrice(Apricot.class));
+        System.out.println("Pear: " + basket.getTotalCostByPrice(Pear.class));
+        System.out.println("Total cost: " + basket.getTotalCost());
 
     }
 }
