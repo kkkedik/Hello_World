@@ -7,32 +7,48 @@ import java.util.Map;
 
 public class UserRepository {
     private static UserRepository instance;
-    Map<String, User> users = new HashMap<>();
+    private final Map<String, User> users = new HashMap<>();
 
     private UserRepository() {
+        initUsers();
     }
 
-    public User checkUser(String key) {
-        User user = (User) users.get(key);
-        if (user == null) {
-            throw new UserNotExistException("Пользователь с таким логином не найден");
-        }
-        return user;
+    public Map<String, User> getUsers() {
+        return users;
     }
 
-    public void addUser(String key, User user) {
-        users.put(key, user);
-    }
-
-    public void setUsers(Map<String, User> users) {
-        this.users = users;
-    }
-
-    public static UserRepository getInstance() {
+    public static UserRepository getInstance(){
         if (instance == null) {
-            instance = new UserRepository();
+            return new UserRepository();
         }
         return instance;
     }
+
+    public void initUsers(){
+        users.put("Login_1", new User("Login_1", "password_1"));
+        users.put("Login_2", new User("Login_2", "password_2"));
+    }
+
+//    private UserRepository() {
+//    }
+
+//    public User checkUser(String key) {
+//        User user = (User) users.get(key);
+//        if (user == null) {
+//            throw new UserNotExistException("Пользователь с таким логином не найден");
+//        }
+//        return user;
+//    }
+//
+//    public void addUser(String key, User user) {
+//        users.put(key, user);
+//    }
+//
+//    public static UserRepository getInstance() {
+//        if (instance == null) {
+//            return new UserRepository();
+//        }
+//        return instance;
+//    }
 
 }
