@@ -1,4 +1,7 @@
-package by.itacademy.hw8.Task3;
+package by.itacademy.hw8.task3;
+
+import by.itacademy.hw8.task3.cloth.*;
+import by.itacademy.hw8.task3.shoes.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,12 +9,12 @@ import java.util.Scanner;
 
 public class Shop {
     public static void main(String[] args) {
-        Sweatshirt sweatshirt = new Sweatshirt("Adidas", ClothesSize.S);
-        Boots boots = new Boots("Abibasss", ShoesSize.SIZE42);
-        Hat hat = new Hat("Gryas", ClothesSize.XL);
-        Moccasins moccasins = new Moccasins("Blood", ShoesSize.SIZE38);
-        Sneakers sneakers = new Sneakers("Neman", ShoesSize.SIZE39);
-        Trousers trousers = new Trousers("Reebok", ClothesSize.M);
+        Sweatshirt sweatshirt = new Sweatshirt("Adidas", ClothesSize.S, ClothesColors.BLUE);
+        Boots boots = new Boots("Abibasss", ShoesSize.SIZE42, ShoesColors.GREEN);
+        Hat hat = new Hat("Gryas", ClothesSize.XL, ClothesColors.RED);
+        Moccasins moccasins = new Moccasins("Blood", ShoesSize.SIZE38, ShoesColors.WHITE);
+        Sneakers sneakers = new Sneakers("Neman", ShoesSize.SIZE39, ShoesColors.YELLOW);
+        Trousers trousers = new Trousers("Reebok", ClothesSize.M, ClothesColors.GREEN);
 
         List<Product> products = new ArrayList<>();
         products.add(sweatshirt);
@@ -36,8 +39,17 @@ public class Shop {
     }
 
     public static void printList(List<Product> products) {
+        int index = 1;
+        for (Product item : products) {
+            System.out.println(index++ + ". " + item.name);
+        }
+    }
+
+    public static void searchBySize(List<Product> products, ClothesColors color) {
         int index = 0;
         for (Product item : products) {
+//            if (color.equals()) {
+//            }
             System.out.println(index++ + ". " + item.name);
         }
     }

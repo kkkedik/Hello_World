@@ -1,4 +1,4 @@
-package by.itacademy.hw8.Task3;
+package by.itacademy.hw8.task3;
 
 public abstract class Product {
 
