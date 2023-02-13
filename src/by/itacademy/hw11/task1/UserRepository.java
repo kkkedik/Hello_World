@@ -2,12 +2,14 @@ package by.itacademy.hw11.task1;
 
 import by.itacademy.hw11.task1.exceptions.UserNotExistException;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
 public class UserRepository {
     private static UserRepository instance;
     private final Map<String, User> users = new HashMap<>();
+    LocalDateTime localDateTime = LocalDateTime.now();
 
     private UserRepository() {
         initUsers();
@@ -25,8 +27,8 @@ public class UserRepository {
     }
 
     public void initUsers(){
-        users.put("Login_1", new User("Login_1", "password_1"));
-        users.put("Login_2", new User("Login_2", "password_2"));
+        users.put("Login_1", new User("Login_1", "password_1", localDateTime));
+        users.put("Login_2", new User("Login_2", "password_2", localDateTime));
     }
 
 //    private UserRepository() {

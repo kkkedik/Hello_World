@@ -7,6 +7,7 @@ import by.itacademy.hw11.task1.exceptions.UserNotExistException;
 import by.itacademy.hw11.task1.exceptions.WrongLoginException;
 import by.itacademy.hw11.task1.exceptions.WrongPasswordException;
 
+import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.Optional;
 
@@ -37,7 +38,8 @@ public class UserService {
             throw new WrongPasswordException("некорректный пароль");
         }
         if (findUser(login).isEmpty()) {
-            users.put(login, new User(login, password));
+            LocalDateTime localDateTime = LocalDateTime.now();
+            users.put(login, new User(login, password, localDateTime));
         } else {
             throw new UserAlreadyExists("пользователь с таким логином уще существует");
         }

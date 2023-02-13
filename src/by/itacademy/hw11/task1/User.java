@@ -1,32 +1,38 @@
 package by.itacademy.hw11.task1;
 
+import java.time.LocalDateTime;
+
 public class User {
     private String login;
     private String name;
     private String surname;
     private String password;
+    private LocalDateTime registrationDate;
+    private LocalDateTime lastAuthorizationDate;
 
-    public User(String login, String password) {
+    public User(String login, String password, LocalDateTime lastAuthorizationDate) {
         this.login = login;
         this.password = password;
+        this.lastAuthorizationDate = lastAuthorizationDate;
+        if (registrationDate == null) {
+            registrationDate = lastAuthorizationDate;
+        }
     }
 
-    public User(String login, String password, String surname, String name) {
-        this.login = login;
-        this.name = name;
-        this.surname = surname;
-        this.password = password;
+
+    public void setLastAuthorizationDate(LocalDateTime lastAuthorizationDate) {
+        this.lastAuthorizationDate = lastAuthorizationDate;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
+//    public void setSurname(String surname) {
+//        this.surname = surname;
+//    }
 }
