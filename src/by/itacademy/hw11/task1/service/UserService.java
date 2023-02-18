@@ -56,24 +56,4 @@ public class UserService {
     private Optional<User> findUser(String login) {
         return Optional.ofNullable(userRepository.getUser(login));
     }
-
-//    public User checkUser(String key) {
-//        User user = (User) users.get(key);
-//        if (user == null) {
-//            throw new UserNotExistException("Пользователь с таким логином не найден");
-//        }
-//        return user;
-//    }
-//
-//    public void addUser(String key, User user) {
-//        users.put(key, user);
-//    }
-//
-//    public static UserService getInstance() {
-//
-//        if (instance == null) {
-//            return new UserService();
-//        }
-//        return instance;
-//    }
 }
