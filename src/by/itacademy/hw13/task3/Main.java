@@ -30,8 +30,5 @@ public class Main {
         Thread t3 = new Thread(r3);
         t3.start();
 
-        //num.notify();
-//        num.notify();
-//        num.notify();
     }
 }

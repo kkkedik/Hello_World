@@ -9,8 +9,6 @@ public class Main {
         System.out.println(thread.getState());
          thread.sleep(100);
         System.out.println(thread.getState());
-//        Thread.sleep(500);
-//        System.out.println(thread.getState());
     }
 
 }

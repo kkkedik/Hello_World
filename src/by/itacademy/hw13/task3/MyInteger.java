@@ -9,21 +9,11 @@ public class MyInteger {
     }
 
     public synchronized void print100AndIncrement() {
-//        while (busy) {
-//            try {
-//                wait();
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//        busy = true;
         for (int i = 0; i < 100; i++) {
             System.out.print(num);
         }
         num++;
         System.out.println();
-//        busy = false;
-//        notify();
     }
 
 }
