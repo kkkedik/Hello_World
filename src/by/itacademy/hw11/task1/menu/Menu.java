@@ -10,22 +10,25 @@ import java.awt.*;
 
 public class Menu {
 
-    private final  MenuAction menuAction = new MenuAction();
-    public static void main(String[] args) {new Menu().showMenu();}
+    private final MenuAction menuAction = new MenuAction();
 
-    public void showMenu(){
+    public static void main(String[] args) {
+        new Menu().showMenu();
+    }
+
+    public void showMenu() {
         UserRepository userRepository = UserRepository.getInstance();
         System.out.println("Главное меню\n" +
-                    "1: Авторизация\n" +
-                    "2: Регистрация\n" +
-                    "3: Выход\n");
+                "1: Авторизация\n" +
+                "2: Регистрация\n" +
+                "3: Запрос пользователей по времени регистрации\n" +
+                "4: Выход\n");
 
         boolean isExit = false;
 
-        while (!isExit){
-            switch (new SelectAction().getAction()){
+        while (!isExit) {
+            switch (new SelectAction().getAction()) {
                 case 1:
-
                     menuAction.authorization();
                     showMenu();
                     break;
@@ -34,6 +37,10 @@ public class Menu {
                     showMenu();
                     break;
                 case 3:
+                    menuAction.getUsersByRegistrationDate();
+                    showMenu();
+                    break;
+                case 4:
                     isExit = true;
                     return;
             }
@@ -42,11 +49,7 @@ public class Menu {
     }
 
 
-
-    }
-
-
-
+}
 
 
 //        Scanner scanner = new Scanner(System.in);

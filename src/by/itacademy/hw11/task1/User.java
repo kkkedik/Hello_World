@@ -10,18 +10,22 @@ public class User {
     private LocalDateTime registrationDate;
     private LocalDateTime lastAuthorizationDate;
 
-    public User(String login, String password, LocalDateTime lastAuthorizationDate) {
+    public User(String login, String password, LocalDateTime registrationDate) {
         this.login = login;
         this.password = password;
-        this.lastAuthorizationDate = lastAuthorizationDate;
-        if (registrationDate == null) {
-            registrationDate = lastAuthorizationDate;
-        }
+        this.registrationDate = registrationDate;
     }
 
+    public String getLogin() {
+        return login;
+    }
 
     public void setLastAuthorizationDate(LocalDateTime lastAuthorizationDate) {
         this.lastAuthorizationDate = lastAuthorizationDate;
+    }
+
+    public LocalDateTime getRegistrationDate() {
+        return registrationDate;
     }
 
     public String getPassword() {
